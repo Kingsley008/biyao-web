@@ -1,0 +1,53 @@
+.nav-right p{
+    float: right;
+    color: #8c8292;
+    margin-top: 20px;
+}
+.nav-right span{
+    cursor: pointer;
+}
+/* 登录区 */
+.t-body{
+    text-align: center;
+}
+.login-form{
+    width: 400px;
+    height: 300px;
+    display: inline-block;
+    margin-top: 30px;
+}
+.login-form h3{
+    font-size: 18px;
+    text-align: left;
+    margin: 20px 0 ;
+}
+.login-form input{
+    width: 400px;
+    height: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+#auto-login{
+    width: 20px;
+    margin-right: 10px;
+}
+#auto-login,#auto-login+label{
+    float: left;
+    display: inline-block;
+}
+.login-form button{
+    display: block;
+    height: 45px;
+    width: 443px;
+    background-color: #f7b200;
+   border: none;
+    color: #fff;
+    font-size: 16px;
+}
+.login-form i{
+    float: left;
+    color: #f7b200;
+}
+.j-error{
+    border: 1px solid #f7b200 ;
+}

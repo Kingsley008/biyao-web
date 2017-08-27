@@ -1,0 +1,53 @@
+.nav-right p{
+    float: right;
+    color: #8c8292;
+    margin-top: 20px;
+}
+.nav-right span{
+    cursor: pointer;
+}
+/* 登录区 */
+.t-body{
+    text-align: center;
+}
+.reg-form{
+    width: 400px;
+    height: 300px;
+    display: inline-block;
+    margin-top: 30px;
+}
+.reg-form h3{
+    font-size: 18px;
+    text-align: left;
+    margin: 20px 0 ;
+}
+.reg-form input{
+    width: 400px;
+    height: 20px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+#check-server{
+    width: 20px;
+    margin-right: 10px;
+}
+#check-server,#check-server+label{
+    float: left;
+    display: inline-block;
+}
+.reg-form button{
+    display: block;
+    height: 45px;
+    width: 443px;
+    background-color: #f7b200;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+}
+.reg-form i{
+    float: left;
+    color: #f7b200;
+}
+.j-error{
+    border: 1px solid #f7b200 ;
+}

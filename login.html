@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>必要商城</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+<!-- 导航 -->
+<div class="t-nav">
+    <div class="t-nav-center f-cb">
+        <div class="nav-logo"><a href=""></a></div>
+        <div class="nav-right">
+            <p class="f-cb">
+                欢迎来到必要，请
+                <span class="login-btn">登入</span>
+                <i>|</i>
+                <span class="register-btn">注册</span>
+            </p>
+        </div>
+    </div>
+</div>
+<div class="t-body f-center">
+    <form class="login-form" method="post" action="" autocomplete="off">
+        <h3>用户登录</h3>
+        <i class="phone-warn"></i>
+        <input class="phoneNum" placeholder="请输入手机号" data-type = "phone" autocomplete="off">
+        <i class="password-warn"></i>
+        <input class="password" type="password" placeholder="请输入登录密码" data-type = "password" autocomplete="off">
+        <input  type="checkbox" class="autologin" id="auto-login" value="1"><label for="auto-login">下次自动登录</label>
+        <button class="loginBtn" type="submit" >登 录</button>
+    </form>
+</div>
+<!-- footer-->
+<div class="ft">
+    <div class="ft-wrap f-center">
+        <div class="special-serve">
+            <ul class="f-cb">
+                <li class="serve-make">直连一线制造</li>
+                <li class="serve-shipping">全品类包邮</li>
+                <li class="serve-pay">平台先行赔付</li>
+                <li class="serve-refund">7天无忧退货</li>
+            </ul>
+        </div>
+        <div class="ft-content f-cb">
+            <ul class="f-cb">
+                <li>
+                    <h3>帮助中心</h3>
+                    <a href="">平台政策</a><a href="">商家入驻</a></li>
+                <li>
+                    <h3>关注必要</h3>
+                    <a href="">新浪微博</a><a href="">官方微信</a></li>
+                <li>
+                    <h3>关于必要</h3>
+                    <a href="">了解必要</a><a href="">加入必要</a><a href="">联系我们</a></li>
+                <li>
+                    <h3>下载必要app</h3>
+                    <img src="imgs/app.png"></li>
+            </ul>
+            <dl>
+                <dt>服务监督邮箱</dt>
+                <dd>service@biyao.com</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/validate.js"></script>
+<script>
+    $.validate({
+        phoneNumSelector:".phoneNum", //检查手机号码格式
+        passwordSelector:".password", //检查密码格式
+        secPswSelector:null, // 注册 第二次密码确认
+        checkAutoLoginSelector:".autologin", // 自动登录 cookies 设置
+        checkValidateSelector:null, //注册 用户协议确认
+        loginBtnSelector:".loginBtn",
+        loginFormSelector:".login-form"
+
+    })
+</script>
+</html>

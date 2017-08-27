@@ -1,0 +1,641 @@
+/* common */
+
+.f-center {
+    margin: 0 auto;
+    width: 1080px;
+    height: 100%;
+    padding: 10px 0px;
+}
+
+body {
+    font: 12px Microsoft YaHei;
+    color: #333;
+}
+
+html, body {
+    height: auto;
+}
+
+/* 统一设置雪碧图 背景 */
+.drop-icon, .user-shopCar:before, .user-message:before, .user-app-drop span, .searchBtn, .rightBar-code-show > span, .special-serve ul li::before {
+    background: url("../imgs/comSprite.png") no-repeat 0 0;
+}
+
+/* header 样式 通用 */
+.t-header {
+    width: 100%;
+    height: 30px;
+    background-color: #333;
+}
+
+.t-header-center {
+    position: relative;
+    margin: 0 auto;
+    width: 1080px;
+    height: 100%;
+    padding-top: 6px;
+}
+
+.header-nav {
+    float: left;
+}
+
+.header-user {
+    float: right;
+}
+
+.header-nav-item {
+    float: left;
+}
+
+.header-user-item {
+    float: left;
+}
+
+.t-header a {
+    font-size: 12px;
+    color: #ccc;
+}
+
+.t-header a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.hr-v {
+    display: inline-block;
+    vertical-align: middle;
+    height: 11px;
+    width: 1px;
+    margin: 0 18px;
+    background-color: #cbcbcb;
+}
+
+.header-user > li:first-child {
+    margin-right: 18px;
+}
+
+.header-user > li:nth-child(5) {
+    margin-right: 18px;
+}
+
+.header-user span {
+    margin-left: 18px;
+}
+
+.user-center, .user-app {
+    width: 110px;
+}
+
+/* 下拉菜单 */
+.user-center-drop {
+    display: none;
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    right: 340px;
+    width: 120px;
+    height: 150px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 10px 4px rgba(0, 0, 0, .05);
+    border-radius: 4px;
+}
+
+.drop-icon {
+    position: relative;
+    display: inline-block;
+    top: -10px;
+    width: 20px;
+    height: 14px;
+    background-position: -104px 0px;
+
+}
+
+.user-center-drop a {
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 22px;
+    color: #333;
+    padding: 10px 0;
+}
+
+.user-center-drop a:hover {
+    background-color: #f5f5f5;
+    color: #333333;
+}
+
+.header-user-item.user-center:hover .user-center-drop {
+    display: block;
+}
+
+.user-message:before {
+    content: "";
+    float: left;
+    width: 16px;
+    height: 15px;
+    margin-right: 3px;
+    background-position: 0 -58px;
+}
+
+.user-shopCar {
+    background-color: #523669;
+    height: 20px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.user-shopCar:before {
+    content: "";
+    float: left;
+    width: 17px;
+    height: 13px;
+    background-position: -19px -23px;
+}
+
+.user-app-drop {
+    z-index: 3;
+    position: absolute;
+    display: none;
+    top: 30px;
+    right: 220px;
+    width: 120px;
+    height: 150px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 10px 4px rgba(0, 0, 0, .05);
+    border-radius: 4px;
+}
+
+.user-app-drop span {
+
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 5px 0 0 0;
+    background-position: -130px 0px;
+}
+
+.header-user-item.user-app:hover .user-app-drop {
+    display: block;
+}
+
+/* nav 定位 通用 */
+.t-nav {
+    background-color: #fff;
+    height: 98px;
+}
+
+.t-nav-center {
+    margin: 0 auto;
+    width: 1080px;
+    height: 100%;
+    padding: 10px 0px;
+}
+
+.nav-logo {
+    float: left;
+}
+
+.nav-logo a {
+    display: inline-block;
+    width: 300px;
+    height: 80px;
+    background: url("http://static1.biyao.com/pc/common/img/master/logo.png?v=biyao_4637d54") 0 center no-repeat;
+}
+
+.nav-search {
+    float: right;
+    margin-top: 20px;
+}
+
+.nav-search input {
+    width: 308px;
+    height: 38px;
+    padding-left: 10px;
+    overflow: hidden;
+}
+
+.nav-search > p {
+    height: 42px;
+}
+
+.searchBtn {
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-position: -10px -105px;
+}
+
+.t-side {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    margin-left: 580px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 50px;
+}
+
+.rightBar-code, .rightBar-top {
+    position: relative;
+    display: block;
+    height: 48px;
+    width: 48px;
+    background: url("../imgs/rightBar-code.png") no-repeat;
+    cursor: pointer;
+}
+
+.rightBar-code-show {
+    display: none;
+    z-index: 5;
+    position: absolute;
+    right: 53px;
+    padding: 10px;
+    width: 200px;
+    height: 250px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.rightBar-code-show > span {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    right: -8px;
+    width: 10px;
+    height: 14px;
+    background-position: -18px -140px;
+}
+
+.rightBar-code dl dt {
+    display: inline-block;
+    width: 171px;
+    height: 171px;
+    background: url("../imgs/app.png") no-repeat 0 0;
+}
+
+.rightBar-code:hover .rightBar-code-show {
+    display: block;
+}
+
+.rightBar-top {
+    background: url("../imgs/rightBar-top.png") no-repeat;
+}
+
+.rightBar-top a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+/* fixed top 组件*/
+.fixed-top {
+    position: fixed;
+    z-index: 888;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+
+.t-nav-center-fixed {
+    margin: 0 auto;
+    width: 1080px;
+    height: 82px;
+}
+
+.nav-category {
+    float: left;
+    vertical-align: bottom;
+    height: 100%;
+}
+
+.nav-category span {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 16px;
+    line-height: 2em;
+    cursor: pointer;
+}
+
+.nav-category i {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background: url("../imgs/comSprite.png") no-repeat 0 -98px;
+    cursor: pointer;
+}
+
+.nav-category:hover.nav-category i {
+    background-position: 0 -88px;
+}
+
+.catalog.fixed {
+    top: 82px;
+    display: none;
+}
+
+.nav-category:hover ~ .catalog.fixed {
+    display: block;
+}
+
+.catalog.fixed:hover {
+    display: block;
+}
+
+/* footer */
+.ft {
+    background-color: #fff;
+    height: 400px;
+}
+
+.special-serve ul li::before {
+    content: "";
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin-right: 30px;
+    vertical-align: middle;
+    background-position: -138px -160px;
+}
+
+.special-serve ul {
+    width: 1080px;
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #999;
+    margin-bottom: 20px;
+}
+
+.special-serve ul li {
+    font-size: 16px;
+    display: inline-block;
+    margin-right: 40px;
+}
+
+.special-serve ul .serve-shipping::before {
+    background-position: -140px -285px;
+}
+
+.special-serve ul .serve-pay::before {
+    background-position: -19px -162px;
+}
+
+.special-serve ul .serve-refund::before {
+    background-position: -19px -284px;
+}
+
+.ft-content {
+    padding: 0 20px 0 50px;
+}
+
+.ft-content ul {
+    width: 850px;
+    height: 170px;
+    float: left;
+    border-right: 1px solid #999999;
+}
+
+.ft-content ul li {
+    float: left;
+    margin: 0px 110px 20px 20px;
+}
+
+.ft-content ul li a {
+    display: block;
+    margin-bottom: 20px;
+    color: #999999;
+}
+
+.ft-content ul li a:hover {
+    color: #523669;
+}
+
+.ft-content ul li h3 {
+    font-size: 18px;
+    line-height: 2em;
+    margin-bottom: 20px;
+}
+
+.ft-content ul li h3 + img {
+    width: 105px;
+    height: 105px;
+}
+
+.ft-content dl {
+    float: right;
+}
+
+.ft-content dl dt {
+    font-size: 16px;
+    line-height: 2em;
+    margin-bottom: 20px;
+}
+
+/*catalog*/
+
+.catalog {
+    z-index: 1;
+    position: absolute;
+    font-size: 14px;
+    line-height: 24px;
+    top: 5px;
+    width: 200px;
+    height: 340px;
+    padding: 10px 0;
+    background: url("../imgs/bk/category-back.png") repeat;
+}
+
+.catalog > ul > li > p {
+    padding-left: 15px;
+}
+
+.catalog > ul > li > p > a {
+    color: #fff;
+}
+
+.catalog > ul > li {
+    padding: 10px 0;
+
+}
+
+.catalog > ul > li span {
+    margin: 0 5px;
+    color: #fff;
+}
+
+.catalog > ul > li:hover {
+    background-color: #78737e;
+}
+
+.catalog > ul > li > p > a:hover {
+    color: #f7b200;
+}
+
+.nav-sub-p {
+    display: none;
+    position: absolute;
+    left: 200px;
+    top: 0;
+    width: 700px;
+    min-height: 360px;
+    background-color: #fff;
+    box-shadow: 1px 0 15px 5px rgba(0, 0, 0, 0.5);
+}
+
+.left-sub {
+    float: left;
+    padding: 20px;
+}
+
+.right-sub {
+    overflow: hidden;
+    width: 300px;
+    border-bottom: 1px solid #f5f5f5;
+    padding: 20px;
+}
+
+.right-sub a {
+    color: #78737e;
+    margin-left: 5px;
+}
+
+.right-sub a:hover {
+    color: #503768;
+}
+
+.left-sub a:hover {
+    color: #333;
+}
+
+.nav-main:hover.nav-main ul {
+    display: block;
+}
+
+/* list section */
+.t-bd {
+    height: auto;
+}
+
+.t-bd .nav {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.t-bd .nav li {
+    display: inline-block;
+    text-align: left;
+}
+
+.t-bd .nav i {
+    margin: 0 8px;
+}
+
+.t-bd .tab {
+    background-color: #fff;
+    font-size: 16px;
+    height: 50px;
+    color: #808080;
+    margin-top: 20px;
+}
+
+.t-bd .tab ul {
+    padding: 20px;
+    background-color: #fff;
+}
+
+.t-bd .tab li, .t-bd .tab h3 {
+    float: left;
+    margin-right: 20px;
+
+}
+
+.t-bd .tab ul a {
+    color: #808080;
+}
+
+.t-bd .tab ul a:hover {
+    color: #333333;
+}
+
+.list .nav {
+    font-size: 24px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.list .hd i {
+    display: inline-block;
+    width: 255px;
+    height: 255px;
+    overflow: hidden;
+}
+
+.list .hd i img {
+    width: 255px;
+    height: 255px;
+}
+
+.list .hd i img:hover {
+    animation-name: scale;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.list li:hover {
+    box-shadow: 1px 0 5px 2px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes scale {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.05)
+    }
+}
+
+.list .bd {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.list .bd h3 {
+    font-size: 16px;
+}
+
+.list ul {
+
+}
+
+.list li {
+    position: relative;
+    float: left;
+    width: 255px;
+    height: 335px;
+    background-color: #fff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+
+.list li .price {
+    font-size: 16px;
+    margin-top: 10px;
+    color: #ff3333;
+}
+
+.list li b {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    display: inline-block;
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    background-color: #fc3332;
+    border-radius: 50%;
+}
