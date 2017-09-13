@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>必要商城</title>
+    <meta name="description"
+          content="必要C2M商城是全球性价比最高的电子商务平台，是全球第一家用户直连制造（Customer To Manufactory）的平台，通过平台建立消费者与品质制造商的桥梁，将消费者的需求直接发送到工厂，按需生产模式既满足了消费者个性化的需求，又短路了复杂的商品流通环节，真正让消费者享受到专属且高品质的商品。目前，商品覆盖高跟鞋、眼镜、饰品、运动鞋、运动服、女士包包等品类，未来会按照消费者需求来增加新的产品类目。">
+    <meta name="Keywords" content="必要;必要商城;必要平台;必要电商;C2M商城;工业4.0;定制平台;定制商城;奢侈品定制;定制鞋;定制包;定制眼镜;定制饰品;定制运动服;定制运动鞋">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/shoppingcart.css">
+
+</head>
+<body>
+<!-- 顶部栏 -->
+<div id="top" class="t-header">
+    <div class="t-header-center f-tac">
+        <ul class="header-nav">
+            <li class="header-nav-item"><a href="">首页</a><b class="hr-v"></b></li>
+            <li class="header-nav-item"><a href="">平台政策</a><b class="hr-v"></b></li>
+            <li class="header-nav-item"><a href="">商家入驻</a></li>
+        </ul>
+        <ul class="header-user">
+            <li class="header-user-item login"><a href="login.html" id="loginBtn">登录</a></li>
+            <li class="header-user-item regist"><a href="register.html" id="registBtn">注册</a><b class="hr-v"></b></li>
+            <li class="header-user-item user-center"><a href="javascript:void(0)" id="username">用户中心</a><b
+                    class="hr-v"></b>
+                <div class="user-center-drop">
+                    <b class="drop-icon"></b>
+                    <ul>
+                        <li><a href="" target="_blank">我的订单</a></li>
+                        <li><a href="" target="_blank">个人中心</a></li>
+                        <li><a href="">退出登录</a></li>
+                    </ul>
+                </div>
+            </li>
+            <li class="header-user-item user-app"><a href="">下载必要APP</a><b class="hr-v"></b>
+                <div class="user-app-drop">
+                    <b class="drop-icon"></b>
+                    <dl>
+                        <dt>
+                        <p>我要的 才是必要的</p></dt>
+                        <dd>
+                            <span></span>
+                        </dd>
+                    </dl>
+                </div>
+            </li>
+            <li class="header-user-item user-message"><a href="">消息中心 <span class="message-num">0</span></a></li>
+            <li class="header-user-item user-shopCar"><a href="">购物车<span class="shopCar-num">0</span></a></li>
+        </ul>
+    </div>
+</div>
+
+
+<div class="cart f-center">
+    <!-- 没有购物信息的模版 -->
+    <div class="no-product f-dn">
+        <p>您的购物车空空的</p>
+        <button id="go-index">立即购物</button>
+    </div>
+    <h3>购物车</h3>
+    <table class="table-title" cellpadding="0" cellspacing="0">
+        <tr>
+            <th colspan="2" width="15%">
+                <label data-select="all"><input name="check-all" class="checkbox checked" type="checkbox" checked>
+                    全选
+                </label>
+            </th>
+            <th align="left">商品信息</th>
+            <th width="10%">单价</th>
+            <th width="10%">数量</th>
+            <th width="20%">包装</th>
+            <th width="10%">小计</th>
+            <th width="5%">操作</th>
+        </tr>
+    </table>
+
+    <table class="shopping-table shopping-table-one">
+        <tbody>
+        <tr>
+            <td width="30" align="left"><input class="single-check" type="checkbox" name="single-check" checked></td>
+            <td>
+                    <span class="shop-img">
+                        <a href="" target="_blank">
+                            <img width="100" height="100" src="imgs/cart/shoppingcart.jpg">
+                        </a>
+                    </span>
+            </td>
+            <td align="left">
+                <a target="_blank" href="">
+                    <span>白色苹果MFi认证数据线</span>
+                </a>
+                <div class="product-des">
+                    <p>颜色：白色</p>
+                    <p>尺寸：1m</p>
+                </div>
+            </td>
+            <td width="10%" class="single-price ff6600">&yen; 45</td>
+            <td width="10%"><input class="total-number" type="number" max="99" min="0" value="1"></td>
+            <td width="20%">
+                <span class="package-type">普通包装</span>
+                <span class="package-price">免费</span>
+            </td>
+            <td width="10%">
+                <span class="product-price-count ff6600">¥45</span>
+            </td>
+            <td width="5%">
+                <a href="javascript:;" class="link-delete"></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table class="shopping-table shopping-table-two">
+        <tbody>
+        <tr>
+            <td width="30" align="left"><input class="single-check" type="checkbox" name="single-check" checked></td>
+            <td>
+                    <span class="shop-img">
+                        <a href="" target="_blank">
+                            <img width="100" height="100" src="imgs/cart/shoppingcart.jpg">
+                        </a>
+                    </span>
+            </td>
+            <td align="left">
+                <a target="_blank" href="">
+                    <span>白色苹果MFi认证数据线</span>
+                </a>
+                <div class="product-des">
+                    <p>颜色：白色</p>
+                    <p>尺寸：1m</p>
+                </div>
+            </td>
+            <td width="10%" class="single-price ff6600">&yen; 45</td>
+            <td width="10%"><input class="total-number" type="number" max="99" min="0" value="1"></td>
+            <td width="20%">
+                <span class="package-type">普通包装</span>
+                <span class="package-price">免费</span>
+            </td>
+            <td width="10%">
+                <span class="product-price-count ff6600">¥45</span>
+            </td>
+            <td width="5%">
+                <a href="javascript:;" class="link-delete"></a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <div class="cart-summary f-cb">
+        <a href="javascript:;">全部删除</a>
+        <div class="settlement ">
+            <p>合计（不含运费）:<span class="cart-sum-price ff6600">¥45</span></p>
+            <button class="settlement-btn">结算</button>
+        </div>
+    </div>
+</div>
+<!-- footer-->
+<div class="ft">
+    <div class="ft-wrap f-center">
+        <div class="special-serve">
+            <ul class="f-cb">
+                <li class="serve-make">直连一线制造</li>
+                <li class="serve-shipping">全品类包邮</li>
+                <li class="serve-pay">平台先行赔付</li>
+                <li class="serve-refund">7天无忧退货</li>
+            </ul>
+        </div>
+        <div class="ft-content f-cb">
+            <ul class="f-cb">
+                <li>
+                    <h3>帮助中心</h3>
+                    <a href="">平台政策</a><a href="">商家入驻</a></li>
+                <li>
+                    <h3>关注必要</h3>
+                    <a href="">新浪微博</a><a href="">官方微信</a></li>
+                <li>
+                    <h3>关于必要</h3>
+                    <a href="">了解必要</a><a href="">加入必要</a><a href="">联系我们</a></li>
+                <li>
+                    <h3>下载必要app</h3>
+                    <img src="imgs/app.png"></li>
+            </ul>
+            <dl>
+                <dt>服务监督邮箱</dt>
+                <dd>service@biyao.com</dd>
+            </dl>
+        </div>
+    </div>
+</div>
+
+
+<div class="m-modal" style="display: none"></div>
+
+<!--
+ 弹窗模块
+    <div class="m-modal-wrap">
+        <p>确定要在购物车中删除该商品吗吗？</p>
+        <button>确定</button>
+        <button>取消</button>
+    </div>
+-->
+
+
+</body>
+
+<script type="text/javascript" src="js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="js/modal.js"></script>
+
+<script>
+    Cart();
+
+    function Cart() {
+        // 从storage中取到数据 填写模版
+
+        // 计算单件商品小结 单价 * 数量 + 包装
+        function calSingle(table) {
+            //single-price ;  total-number ;  package-price; product-price-count
+            var $singlePrice = table.find('.single-price');
+            var singlePrice = $singlePrice.html().match(/[\d]+/g)[0];
+            var $packagePrice = table.find('.package-price');
+            var packagePrice = $packagePrice.html().match(/[\d]+ |免费/g)[0];
+            if (packagePrice === '免费') {
+                packagePrice = 0;
+            }
+
+            var totalNumber = table.find('.total-number').val();
+            var $priceCount = table.find('.product-price-count');
+            $priceCount.html('&yen;' + (singlePrice * totalNumber + packagePrice));
+        }
+
+        function calTotal() {
+            var totalSettlement = 0;
+            // 计算总价
+            $('.product-price-count').each(function () {
+                totalSettlement += Number($(this).html().match(/[\d]+/g)[0]);
+            });
+            $('.cart-sum-price').html('&yen;' + totalSettlement);
+        }
+
+        $('.total-number').each(function (index, ele) {
+
+            $(this).on('input', function (e) {
+                var target = e.target;
+                var $table = $(target).parents().eq(3);
+                // 小结
+                calSingle($table);
+                if ($table.find('.single-check').is(':checked')) {
+                    calTotal();
+                }
+            });
+
+        });
+
+
+
+        // 全部选择
+        $('.checkbox').on('click', function () {
+            console.log($(this).is(':checked'));
+            if ($(this).is(':checked')) {
+                $('.single-check').each(
+                    function () {
+                        $(this).attr('checked', true)
+                    }
+                )
+            } else {
+                $('.single-check').each(
+                    function () {
+                        $(this).attr('checked', false)
+                    }
+                )
+            }
+        })
+
+        // 删除购物商品
+        $('.link-delete').each(function () {
+            $(this).on('click', function (e) {
+                // 1. 清除 localStorage
+                // 询问确认的弹窗
+                $.modal({
+                    message:'确定要删除该商品吗？',
+                    sureCallback: function () {
+                        // 2. 移除dom 节点
+                        $(e.target).parents().eq(3).remove();
+                    },
+                    cancelCallback: function () {
+                        return;
+                    }
+                })
+            })
+        })
+
+
+    }
+</script>
+</html>

@@ -1,0 +1,121 @@
+/* 没有购物信息模块 开始*/
+.cart {
+    width: 1200px;
+    min-height: 500px;
+    font-size: 16px;
+
+}
+
+.no-product {
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.no-product>p {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 100px;
+    color: #fff;
+    background-color: #f7b200;
+    border: none;
+}
+/* 结束 */
+
+.cart>h3 {
+    color:#523669;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 20px;
+    font-size:18px;
+}
+
+/*购物车开始 */
+.table-title {
+    width: 1200px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    color: #523669;
+}
+.table-title tr th {
+    font-weight: normal !important;
+}
+/* 第一件商品 */
+.shopping-table {
+    background-color: #ffffff;
+    border-bottom: 1px solid #ccc;
+    width: 1200px;
+    font-size: 12px;
+}
+.product-des {
+    width: 200px;
+}
+.ff6600{
+    color: #ff6600;
+}
+
+.link-delete {
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url("../imgs/cart/a_delete.png") -10px -32px no-repeat;
+}
+.link-delete:hover {
+    background: url("../imgs/cart/a_delete.png") -10px -10px no-repeat;
+}
+.cart-summary {
+    margin-top: 20px;
+}
+.cart-summary a{
+    font-size: 12px;
+    color: #503768;
+}
+.settlement {
+    float: right;
+}
+.settlement-btn {
+    margin-top: 10px;
+}
+
+/* 结束 */
+
+/* 弹窗模块 */
+
+.m-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height:100%;
+    background-color: #ccc;
+    opacity:0.5;
+    z-index: 998;
+}
+
+.m-modal-wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    z-index: 999;
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    box-shadow: 0 5px 5px #ccc;
+}
+.m-modal-wrap p {
+    font-size: 16px;
+    margin: 40px 0;
+}
+.m-modal-wrap button {
+    display: inline-block;
+    width:60px;
+    margin-right: 10px;
+}
+
+/* 弹窗 结束 */
+

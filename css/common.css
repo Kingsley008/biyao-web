@@ -1,7 +1,7 @@
 .f-center {
     margin: 0 auto;
     width: 1080px;
-    height: 100%;
+    height: auto;
     padding: 10px 0px;
 }
 body {
@@ -219,6 +219,7 @@ body {
     height: 40px;
     background-position: -10px -105px;
 }
+
 /* footer */
 .ft {
     background-color: #fff;
@@ -307,3 +308,83 @@ body {
     line-height: 2em;
     margin-bottom: 20px;
 }
+
+.t-side {
+    position: fixed;
+    left: 50%;
+    top: 40%;
+    margin-left: 580px;
+    border-radius: 3px;
+    background-color: #ffffff;
+    width: 50px;
+}
+
+.rightBar-code, .rightBar-top {
+    position: relative;
+    display: block;
+    height: 48px;
+    width: 48px;
+    background: url("../imgs/rightBar-code.png") no-repeat;
+    cursor: pointer;
+}
+
+.rightBar-code-show {
+    display: none;
+    z-index: 5;
+    position: absolute;
+    right: 53px;
+    padding: 10px;
+    width: 200px;
+    height: 250px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.rightBar-code-show > span {
+    position: absolute;
+    display: inline-block;
+    top: 20px;
+    right: -8px;
+    width: 10px;
+    height: 14px;
+    background-position: -18px -140px;
+}
+/* 侧栏导航 */
+.rightBar-code dl dt {
+    display: inline-block;
+    width: 171px;
+    height: 171px;
+    background: url("../imgs/app.png") no-repeat 0 0;
+}
+
+.rightBar-code:hover .rightBar-code-show {
+    display: block;
+}
+
+.rightBar-top {
+    background: url("../imgs/rightBar-top.png") no-repeat;
+}
+
+.rightBar-top a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+/* 结束 */
+
+/* fixed top 组件*/
+.fixed-top{
+    position: fixed;
+    z-index: 888;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    width: 100%;
+}
+.t-nav-center-fixed{
+    margin: 0 auto;
+    width: 1080px;
+    height: auto;
+}
+
+/* 结束 */

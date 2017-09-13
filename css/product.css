@@ -1,5 +1,10 @@
-body{
+body, html{
+    height: 100%;
     background-color: #fff;
+
+}
+.section.f-center {
+    height: auto !important;
 }
 .section-bread{
     margin: 20px 0;
@@ -25,10 +30,20 @@ body{
     width: 82px;
     height: 462px;
 }
+
+.specs-dimension .specs-style,.specs-size {
+    cursor: pointer;
+}
+
 .editor-pic ul img{
     width: 80px;
     height: 80px;
     cursor: pointer;
+}
+.editor-pic ul li {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 5px;
 }
 .main-active{
    border: 1px solid #523669
@@ -187,8 +202,173 @@ body{
 }
 #buyNow{
     background-color: #503768;
+    margin-right: 15px;
+}
+
+.addShopCar{
+    background-color: #f7b200;
+    width: 180px;
+    font-size: 16px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+    line-height: 40px;
+    float: right;
     margin-right: 20px;
 }
-#addShopCar{
-    background-color: #f7b200;
+
+/* 详情页 tab页 开始*/
+
+.view-title {
+    height: 62px;
+    background-color: #EEECEF;
 }
+.view-title >a {
+    float: left;
+    width: 181px;
+    height: 59px;
+    margin-bottom: -5px;
+    line-height: 50px;
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid #ccc;
+
+}
+.view-title a:first-child{
+    width: 241px;
+    background-color: #999999;
+}
+/* 默认 tab 选中 */
+.tab-selected {
+    border-bottom: 3px solid #503768 !important;
+}
+
+/* 详情页 tab页 结束 */
+
+/* 详情页 左侧栏开始 */
+
+.left-recommendation {
+    float: left;
+    width: 201px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+.left-recommendation li {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.left-recommendation .hd img{
+    width: 200px;
+    height: 200px;
+}
+.left-recommendation .bd {
+    text-align: center;
+}
+.left-recommendation .bd p {
+    font-size: 14px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.left-recommendation .bd .price {
+    color: #ff3333;
+    font-size: 16px;
+}
+/* 左侧栏 结束*/
+
+/* 右侧栏1 文图说明 开始*/
+.right-product-detail {
+    overflow: hidden;
+    padding: 40px;
+}
+
+.right-product-detail dl {
+    font-size: 16px;
+    border-bottom: 2px dashed #ececec;
+    margin-bottom: 20px;
+}
+.right-product-detail dt {
+    float: left;
+    width: 160px;
+
+}
+
+.right-product-detail dd {
+    overflow: hidden;
+}
+
+.img-text {
+    text-align: center;
+    font-size: 18px;
+}
+.img-text p {
+    margin-bottom: 15px;
+}
+
+/* 右侧栏1 文图说明 结束*/
+
+
+
+/* 右侧栏2 评论详情 开始*/
+
+.right-product-detail {
+    overflow: hidden;
+    padding: 20px;
+}
+
+.right-product-detail>p {
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+    padding: 20px 0px;
+
+}
+
+.right-product-detail .total-eval {
+    color: #f7b200;
+
+}
+.right-product-detail li {
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+}
+.eval-user {
+    float: left;
+    text-align: center;
+    margin-right: 40px;
+
+}
+.eval-result {
+    float: right;
+    border-bottom: none !important;
+}
+
+.user-icon {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin-bottom: 10px;
+}
+.eval-content {
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.eval-product {
+    float: left;
+    color: #808080;
+}
+.eval-product span {
+    margin-right: 20px;
+}
+.eval-result .good-icon {
+    width: 25px;
+    height: 25px;
+    background: url("../imgs/icon/icon_good.png") no-repeat center;
+}
+
+.no-more-comment {
+    margin-top: 20px;
+    text-align: center;
+}
+/* 评论详情 结束*/
