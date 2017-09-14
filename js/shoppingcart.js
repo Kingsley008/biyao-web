@@ -131,6 +131,7 @@
             },
             // 删除所有商品
             bindDeleBtn: function () {
+                var self = this;
                 // 删除购物商品
                 $('.link-delete').each(function () {
                     $(this).on('click', function (e) {
@@ -147,7 +148,7 @@
                                 console.log(JSON.parse(localStorage.getItem('productCart')));
                                 // 2. 移除dom 节点
                                 $(e.target).parents().eq(3).remove();
-                                this.jugeCart();
+                                self.jugeCart();
                             },
                             cancelCallback: function () {
                                 return;
@@ -165,7 +166,7 @@
                             var productArr = localStorage.getItem('productCart') && JSON.parse(localStorage.getItem('productCart'));
                             productArr = [];
                             localStorage.setItem('productCart',JSON.stringify(productArr));
-                            this.jugeCart();
+                            self.jugeCart();
                         },
                         cancelCallback: function () {
                             return;
