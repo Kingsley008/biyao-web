@@ -1,0 +1,27 @@
+{
+  "products": [
+    {
+      "imgURL": "imgs/product/p1.jpg",
+      "name": "净色小肌理免烫衬衫3005",
+      "color": "蓝色",
+      "size": "38",
+      "number": "1",
+      "price":"249",
+      "count": "249"
+    },
+    {
+      "imgURL": "imgs/product/p1.jpg",
+      "name": "净色小肌理免烫衬衫3005",
+      "color": "蓝色",
+      "size": "39",
+      "number": "1",
+      "price":"249",
+      "count": "249"
+    }
+  ],
+
+  "total": {
+    "totalNumber": "2",
+    "totalPrice": "498"
+  }
+}

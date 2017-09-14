@@ -51,7 +51,21 @@
         </ul>
     </div>
 </div>
-
+<!-- 导航 -->
+<div class="t-nav">
+    <div class="t-nav-center f-cb">
+        <div class="nav-logo"><a href="index.html"></a></div>
+        <div class="nav-search">
+                <span class="icon-process"></span>
+                <ul class="steps f-cb">
+                    <li>查看购物车</li>
+                    <li>确认订单</li>
+                    <li>在线付款</li>
+                    <li>收货并评价</li>
+                </ul>
+        </div>
+    </div>
+</div>
 
 <div class="cart f-center">
     <!-- 没有购物信息的模版 -->
@@ -137,8 +151,8 @@
 
 <script type="text/javascript" src="js/jquery-3.2.1.js"></script>
 <script type="text/javascript" src="js/modal.js"></script>
-
-<script>
+<script type="text/javascript" src="js/shoppingcart.js"></script>
+<!--<script>
     Cart();
 
     function Cart() {
@@ -247,7 +261,7 @@
 
         // 全部选择
         $('.checkbox').on('click', function () {
-            console.log($(this).is(':checked'));
+
             if ($(this).is(':checked')) {
                 $('.single-check').each(
                     function () {
@@ -279,6 +293,7 @@
                         console.log(JSON.parse(localStorage.getItem('productCart')));
                         // 2. 移除dom 节点
                         $(e.target).parents().eq(3).remove();
+                        jugeCart();
                     },
                     cancelCallback: function () {
                         return;
@@ -310,5 +325,5 @@
 
 
     }
-</script>
+</script>-->
 </html>

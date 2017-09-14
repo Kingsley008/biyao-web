@@ -1,0 +1,99 @@
+/* 购物流程图 */
+
+.icon-process {
+    display: block;
+    width: 560px;
+    height: 22px;
+    background: url("../imgs/cart/car_steps.png") no-repeat -30px -60px ;
+}
+.steps {
+    width: 560px;
+}
+.steps>li{
+    float: left;
+}
+.steps>li:first-child {
+    margin-left: 45px;
+}
+.steps>li:nth-child(2) {
+    margin-left: 80px;
+}
+.steps>li:nth-child(3) {
+    margin-left: 100px;
+}
+.steps>li:nth-child(4) {
+    margin-left: 90px;
+}
+/* 流程结束 */
+
+/* 收货信息 填写区 */
+.h-title {
+    color: #523669;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+button {
+    width: 100px;
+    color: #fff;
+    background-color: #f7b200;
+    border: none;
+}
+.changeAddr {
+    float: right;
+}
+.address label {
+    display: inline-block;
+    vertical-align: top;
+    height: 30px;
+    margin-right: 20px;
+}
+.address label input[name='address'] {
+    width: 350px;
+}
+/* 收货信息  结束*/
+
+/* 订单  开始*/
+.table-title,.settlement-table  {
+    width: 1080px;
+}
+.settlement-table{
+    background-color: #fff;
+}
+.shop-img img {
+    border: 1px solid #ccc;
+}
+
+/* 订单 结束 */
+
+/* 总价 开始*/
+
+.settlement-sum {
+    width: 1080px;
+    height: 100px;
+    text-align: right;
+    background-color: #fff;
+    margin-top: 20px;
+}
+.settlement-sum p{
+    display: inline-block;
+    font-size: 14px;
+    color: #666;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+.settlement-sum button {
+    width:122px;
+    height: 42px;
+}
+.settlement-sum .cart-btn {
+    background-color: #fff;
+    color: #666;
+    border: 1px solid #ccc;
+    margin-right: 20px;
+}
+.ff6600 {
+    color: #ff6600;
+}
+
+

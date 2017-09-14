@@ -1,3 +1,31 @@
+/* 购物流程图 */
+
+.icon-process {
+    display: block;
+    width: 560px;
+    height: 22px;
+    background: url("../imgs/cart/car_steps.png") no-repeat -30px -22px ;
+}
+.steps {
+    width: 560px;
+}
+.steps>li{
+    float: left;
+}
+.steps>li:first-child {
+    margin-left: 45px;
+}
+.steps>li:nth-child(2) {
+    margin-left: 70px;
+}
+.steps>li:nth-child(3) {
+    margin-left: 100px;
+}
+.steps>li:nth-child(4) {
+    margin-left: 90px;
+}
+/* 流程结束 */
+
 /* 没有购物信息模块 开始*/
 .cart {
     width: 1200px;
