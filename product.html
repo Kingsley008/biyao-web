@@ -109,7 +109,7 @@
         </div>
         <div class="editor-panel">
             <div class="panel-top">
-                <h1>净色小肌理免烫衬衫3005</h1>
+                <h1 class="product-name">净色小肌理免烫衬衫3005</h1>
                 <p>纯棉免烫衬衫 抗皱性强 易打理</p>
             </div>
             <ul class="panel-main">
@@ -580,8 +580,8 @@
     <div class="t-nav-center-fixed f-cb">
         <div class="view-title f-cb">
             <a href="">EMP服饰</a>
-            <a href="" class="tab-selected">商品信息</a>
-            <a href="">评价详情<span class="comment-num">138</span></a>
+            <a href="" class="tab-selected" data-tab="detail">商品信息</a>
+            <a href="" data-tab="comment">评价详情<span class="comment-num">138</span></a>
             <p class="addShopCar">加入购物车</p>
         </div>
     </div>
@@ -943,10 +943,37 @@
 
         function showTab(template) {
             container.html('');
-            console.log(template);
             container.html(template);
         }
+        // 切换到 购物车页面  并且 进行数据保存
+        $('.addShopCar').on('click', function () {
+            dealCart()
+            // 跳页
+            location.href = 'shoppingcart.html';
+        })
 
+        function dealCart() {
+            var productObj = {};
+            productObj.imgURL = $('.main-pic').attr('src');
+            productObj.name = $('.product-name').html();
+            productObj.style = $('.lowModel-specs-active .material-sale').html();
+            productObj.size  = $('.specs-detail.lowModel-specs-active').text();
+            productObj.price = $('.panel-money>i').html();
+            productObj.number = $('.panel-number').html();
+
+            if(!localStorage.getItem('productCart')) {
+                // 当前没有购物车 创建购物车
+                var productArr = [];
+                localStorage.setItem('productCart',JSON.stringify(productArr));
+                productArr.push(productObj);
+            } else {
+               // 已有购物车 取出
+                var arr = JSON.parse(localStorage.getItem('productCart'));
+                arr.push(productObj);
+                localStorage.setItem('productCart',JSON.stringify(arr));
+            }
+
+        }
 
     }
 

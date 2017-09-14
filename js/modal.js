@@ -2,7 +2,7 @@
     var template = '\n' +
         '\n' +
         '    <div class="m-modal-wrap">\n' +
-        '        <p class="text">确定要在购物车中删除该商品吗吗？</p>\n' +
+        '        <p class="text"></p>\n' +
         '        <button class="sure">确定</button>\n' +
         '        <button class="cancel">取消</button>\n' +
         '    </div>';
@@ -28,7 +28,7 @@
             _layout: html2node().cloneNode(true),
             prepareText:function () {
                 var self = this;
-                $(self._layout).find('text').innerHTML = this.options.message;
+                $(self._layout).find('.text').html(this.options.message);
                 return self;
             },
             showModal: function () {

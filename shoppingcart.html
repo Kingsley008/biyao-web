@@ -55,104 +55,34 @@
 
 <div class="cart f-center">
     <!-- 没有购物信息的模版 -->
-    <div class="no-product f-dn">
+    <div class="no-product">
         <p>您的购物车空空的</p>
         <button id="go-index">立即购物</button>
     </div>
-    <h3>购物车</h3>
-    <table class="table-title" cellpadding="0" cellspacing="0">
-        <tr>
-            <th colspan="2" width="15%">
-                <label data-select="all"><input name="check-all" class="checkbox checked" type="checkbox" checked>
-                    全选
-                </label>
-            </th>
-            <th align="left">商品信息</th>
-            <th width="10%">单价</th>
-            <th width="10%">数量</th>
-            <th width="20%">包装</th>
-            <th width="10%">小计</th>
-            <th width="5%">操作</th>
-        </tr>
-    </table>
+    <div class="shopping-cart">
+        <h3>购物车</h3>
+        <table class="table-title" cellpadding="0" cellspacing="0">
+            <tr>
+                <th colspan="2" width="15%">
+                    <label data-select="all"><input name="check-all" class="checkbox checked" type="checkbox" checked>
+                        全选
+                    </label>
+                </th>
+                <th align="left">商品信息</th>
+                <th width="10%">单价</th>
+                <th width="10%">数量</th>
+                <th width="20%">包装</th>
+                <th width="10%">小计</th>
+                <th width="5%">操作</th>
+            </tr>
+        </table>
 
-    <table class="shopping-table shopping-table-one">
-        <tbody>
-        <tr>
-            <td width="30" align="left"><input class="single-check" type="checkbox" name="single-check" checked></td>
-            <td>
-                    <span class="shop-img">
-                        <a href="" target="_blank">
-                            <img width="100" height="100" src="imgs/cart/shoppingcart.jpg">
-                        </a>
-                    </span>
-            </td>
-            <td align="left">
-                <a target="_blank" href="">
-                    <span>白色苹果MFi认证数据线</span>
-                </a>
-                <div class="product-des">
-                    <p>颜色：白色</p>
-                    <p>尺寸：1m</p>
-                </div>
-            </td>
-            <td width="10%" class="single-price ff6600">&yen; 45</td>
-            <td width="10%"><input class="total-number" type="number" max="99" min="0" value="1"></td>
-            <td width="20%">
-                <span class="package-type">普通包装</span>
-                <span class="package-price">免费</span>
-            </td>
-            <td width="10%">
-                <span class="product-price-count ff6600">¥45</span>
-            </td>
-            <td width="5%">
-                <a href="javascript:;" class="link-delete"></a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-    <table class="shopping-table shopping-table-two">
-        <tbody>
-        <tr>
-            <td width="30" align="left"><input class="single-check" type="checkbox" name="single-check" checked></td>
-            <td>
-                    <span class="shop-img">
-                        <a href="" target="_blank">
-                            <img width="100" height="100" src="imgs/cart/shoppingcart.jpg">
-                        </a>
-                    </span>
-            </td>
-            <td align="left">
-                <a target="_blank" href="">
-                    <span>白色苹果MFi认证数据线</span>
-                </a>
-                <div class="product-des">
-                    <p>颜色：白色</p>
-                    <p>尺寸：1m</p>
-                </div>
-            </td>
-            <td width="10%" class="single-price ff6600">&yen; 45</td>
-            <td width="10%"><input class="total-number" type="number" max="99" min="0" value="1"></td>
-            <td width="20%">
-                <span class="package-type">普通包装</span>
-                <span class="package-price">免费</span>
-            </td>
-            <td width="10%">
-                <span class="product-price-count ff6600">¥45</span>
-            </td>
-            <td width="5%">
-                <a href="javascript:;" class="link-delete"></a>
-            </td>
-        </tr>
-        </tbody>
-    </table>
-
-
-    <div class="cart-summary f-cb">
-        <a href="javascript:;">全部删除</a>
-        <div class="settlement ">
-            <p>合计（不含运费）:<span class="cart-sum-price ff6600">¥45</span></p>
-            <button class="settlement-btn">结算</button>
+        <div class="cart-summary f-cb">
+            <a class="delete-all" href="">全部删除</a>
+            <div class="settlement ">
+                <p>合计（不含运费）:<span class="cart-sum-price ff6600"></span></p>
+                <button class="settlement-btn">结算</button>
+            </div>
         </div>
     </div>
 </div>
@@ -213,6 +143,68 @@
 
     function Cart() {
         // 从storage中取到数据 填写模版
+        var productArr = localStorage.getItem('productCart') && JSON.parse(localStorage.getItem('productCart'));
+        // 判断购物车 是否有数据
+        jugeCart();
+
+        function jugeCart() {
+            var productArr = localStorage.getItem('productCart') && JSON.parse(localStorage.getItem('productCart'));
+            if (!productArr || productArr.length < 1) {
+                $('.shopping-cart').hide();
+                $('.no-product').show();
+                $('#go-index').on('click', function (e) {
+                    e.preventDefault();
+                    location.href = 'index.html';
+                })
+                return;
+            } else {
+                $('.no-product').hide();
+            }
+        }
+
+        var template = '';
+
+        for (var i = 0; i < productArr.length; i++) {
+            var single = '<table class="shopping-table shopping-table-' + i + '">\n' +
+                '        <tbody>\n' +
+                '        <tr>\n' +
+                '            <td width="30" align="left"><input class="single-check" type="checkbox" name="single-check" checked></td>\n' +
+                '            <td>\n' +
+                '                    <span class="shop-img">\n' +
+                '                        <a href="" target="_blank">\n' +
+                '                            <img width="100" height="100" src="' + productArr[i].imgURL + '">\n' +
+                '                        </a>\n' +
+                '                    </span>\n' +
+                '            </td>\n' +
+                '            <td align="left">\n' +
+                '                <a target="_blank" href="">\n' +
+                '                    <span class="product-name">' + productArr[i].name + '</span>\n' +
+                '                </a>\n' +
+                '                <div class="product-des">\n' +
+                '                    <p>颜色：' + productArr[i].style + '</p>\n' +
+                '                    <p>尺寸：' + productArr[i].size + '</p>\n' +
+                '                </div>\n' +
+                '            </td>\n' +
+                '            <td width="10%" class="single-price ff6600">&yen;' + productArr[i].price +'</td>\n' +
+                '            <td width="10%"><input class="total-number" type="number" max="99" min="0" value="'+ productArr[i].number + '"></td>\n' +
+                '            <td width="20%">\n' +
+                '                <span class="package-type">普通包装</span>\n' +
+                '                <span class="package-price">免费</span>\n' +
+                '            </td>\n' +
+                '            <td width="10%">\n' +
+                '                <span class="product-price-count ff6600">¥' + productArr[i].price + '</span>\n' +
+                '            </td>\n' +
+                '            <td width="5%">\n' +
+                '                <a href="javascript:;" class="link-delete"></a>\n' +
+                '            </td>\n' +
+                '        </tr>\n' +
+                '        </tbody>\n' +
+                '    </table>'
+
+            template += single;
+        }
+        // 插入节点
+        $('.cart-summary').before(template);
 
         // 计算单件商品小结 单价 * 数量 + 包装
         function calSingle(table) {
@@ -253,8 +245,6 @@
 
         });
 
-
-
         // 全部选择
         $('.checkbox').on('click', function () {
             console.log($(this).is(':checked'));
@@ -277,10 +267,16 @@
         $('.link-delete').each(function () {
             $(this).on('click', function (e) {
                 // 1. 清除 localStorage
+                var arr = JSON.parse(localStorage.getItem('productCart'));
+                var tableNumber = $(this).parents('.shopping-table').attr('class').match(/[\d]+/g)[0];
                 // 询问确认的弹窗
                 $.modal({
-                    message:'确定要删除该商品吗？',
+                    message: '确定要删除该商品吗？',
                     sureCallback: function () {
+                        // 1. 删除该商品
+                        arr.splice(tableNumber, 1);
+                        localStorage.setItem('productCart', JSON.stringify(arr));
+                        console.log(JSON.parse(localStorage.getItem('productCart')));
                         // 2. 移除dom 节点
                         $(e.target).parents().eq(3).remove();
                     },
@@ -290,6 +286,27 @@
                 })
             })
         })
+        // 删除全部商品
+        $('.delete-all').on('click', function (e) {
+            // 询问确认的弹窗
+            e.preventDefault();
+            $.modal({
+                message: '确定要删除全部商品吗？',
+                sureCallback: function () {
+                    console.log('click')
+                    var productArr = localStorage.getItem('productCart') && JSON.parse(localStorage.getItem('productCart'));
+                    productArr = [];
+                    localStorage.setItem('productCart',JSON.stringify(productArr));
+                    jugeCart();
+                },
+                cancelCallback: function () {
+                    return;
+                }
+            })
+
+        })
+
+        // TODO  input 数量改变 storage  数量跟着 改变
 
 
     }
